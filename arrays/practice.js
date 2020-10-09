@@ -105,7 +105,7 @@ function evenFinder(nums){
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
 
-
+// minor change so I can update commit message
 
 
 
