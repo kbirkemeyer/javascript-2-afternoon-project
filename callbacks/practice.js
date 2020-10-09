@@ -129,25 +129,23 @@ function uniq(array, cb){
   cb (newArray)
 }
 
-function uniq(array, cb){
-  let newArray = [];
-  for(let i = 0; i <= array.length - 1; i++){
-    newArray.push(array[i]);
-    for(let j = 0; j <= newArray.length - 1; j++){
-      if(newArray[j] === true){
-        newArray.push(newArray[j])
-      }
-    }
-  }
-  cb (newArray)
-}
-
-function checker(){
-  for(let i = 0; i <= array.length - 1; i++){
-    if{array[i] === true}
-      message = "It's already in there, ya dingus"
-  }
-}
+// This is a way to do the same thing but with nested for loops
+// function uniq(array, cb){
+//   let newArray = [];
+//   for(let i = 0; i <= array.length - 1; i++){
+//     let exists;
+//     for(let j = 0; j <= newArray.length - 1; j++){
+//       if(newArray[j] === array[i]){
+//         exists = true;
+//         break;
+//       }
+//     }
+//     if(exists !== true){
+//       newArray.push(array[i]);
+//     }
+//   }
+//   cb (newArray)
+// }
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -165,7 +163,11 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
-
+function each(names, cb){
+  for(i = 0; i <= names.length - 1; i++) {
+  cb (names[i], i)
+  }
+}
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -182,7 +184,13 @@ each(names, function(item, indice){
 */
 
 // Code here
-
+function getUserById(users, id, cb){
+  for(i = 0; i <= users.length - 1; i++){
+  if(users[i].id === id){
+    cb(users[i]);
+  }
+  }
+}
 // Do not edit the code below.
 var users = [
   {
