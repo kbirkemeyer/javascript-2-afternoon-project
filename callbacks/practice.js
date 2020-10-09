@@ -120,10 +120,32 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 function uniq(array, cb){
-  let newArray = []:
+  let newArray = [];
   for(let i = 0; i <= array.length - 1; i++){
-    
-      for()
+    if(newArray.includes(array[i]) === false){
+    newArray.push(array[i]);
+    }
+  }
+  cb (newArray)
+}
+
+function uniq(array, cb){
+  let newArray = [];
+  for(let i = 0; i <= array.length - 1; i++){
+    newArray.push(array[i]);
+    for(let j = 0; j <= newArray.length - 1; j++){
+      if(newArray[j] === true){
+        newArray.push(newArray[j])
+      }
+    }
+  }
+  cb (newArray)
+}
+
+function checker(){
+  for(let i = 0; i <= array.length - 1; i++){
+    if{array[i] === true}
+      message = "It's already in there, ya dingus"
   }
 }
 
